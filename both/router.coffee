@@ -1,5 +1,5 @@
 Router.configure
-  layoutTemplate: "masterLayout"
+  layoutTemplate: "homeLayout"
   loadingTemplate: "loading"
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
@@ -9,17 +9,6 @@ Router.map ->
   @route "home",
     path: "/"
     layoutTemplate: "homeLayout"
-  @route "dashboard",
-    path: "/dashboard"
-    waitOn: ->
-      [
-        Meteor.subscribe 'posts'
-        Meteor.subscribe 'favorites'
-        Meteor.subscribe 'comments'
-        Meteor.subscribe 'attachments'
-      ]
-    data: ->
-      Posts: Posts.find({},{sort: {createdAt: -1}}).fetch()
   @route "profile",
     path: "/profile"
     waitOn: ->

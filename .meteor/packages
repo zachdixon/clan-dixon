@@ -31,5 +31,9 @@ yogiben:pretty-emails
 yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
-yogiben:bootstrap
+# yogiben:bootstrap
+mizzao:bootstrap-3
+html5cat:bootstrap-material-design
+ecwyne:polymer-elements
+ecwyne:polymer
 

@@ -1,0 +1,54 @@
+
+.btn-large {
+  font-size: 21px;
+  line-height: 36px;
+  padding: 12px 24px;
+}
+
+.navbar-default {
+  background: transparent;
+  border: none;
+  transition: all 400ms;
+  &.scrolled {
+    background: #232323;
+  }
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-brand,
+.navbar .navbar-nav > li > a {
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .25);
+  transition: all 400ms;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0;
+  paper-button {
+    padding: 10px 0;
+  }
+  &:hover {
+    border-bottom: 2px solid #fff;
+  }
+}
+.navbar-default .navbar-brand {
+  z-index: 900;
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  line-height: 32px;
+  color: #fff;
+  padding: 15px;
+}
+.navbar-default .navbar-nav > .active > a {
+  color: #000;
+  font-weight: bold;
+  background: rgba(255,255,255,0.5);
+  border-bottom: 2px solid #fff;
+  margin: 0;
+}
+
+
+button.navbar-toggle {
+  background: none;
+}
