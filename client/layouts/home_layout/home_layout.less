@@ -1,9 +1,9 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic");
+
 body
 {
 	padding-top: 0px;
 }
-
-@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic");
 
 .iconbox img {
 	max-width: 40%;
@@ -19,7 +19,6 @@ body
 	}
 
 	header {
-		z-index: 1000;
 		position: relative;
 		width: 100%;
 	}
@@ -36,9 +35,10 @@ body
 
 	.layout-section {
 		.container {
-			padding: 50px 15px 100px;
+			padding: 50px 15px;
 		}
 		h1 {
+			font-family: 'Cinzel Decorative', sans-serif;
 			display: block;
 			font-size: 28px;
 			line-height: 32px;
@@ -69,10 +69,10 @@ body
 		padding: 100px 0 140px 0;
 
 		h1 {
-			font-family: 'Lato', sans-serif;
+			font-family: 'Cinzel Decorative', sans-serif;
 			font-size: 62px;
 			line-height: 62px;
-			font-weight: 300;
+			font-weight: 400;
 			letter-spacing: 1.5px;
 			text-align: center;
 			color: #fff;
@@ -131,7 +131,7 @@ body
 		background-size: cover;
 		background-attachment: fixed;
 		.container {
-			background: rgba(0,0,0,0.5);
+			background: rgba(0,0,0,0.75);
 		}
 		p {
 			font-size: 15px;
@@ -143,6 +143,74 @@ body
 	}
 	.text-align-left {
 		text-align: left;
+	}
+	/* ========== FAMILY ========*/
+	#family {
+		/* Full tree */
+		background-image: url('/img/tree.svg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center 100px;
+
+		/* Corner tree */
+		// background-image: url('/img/corner_tree.png');
+		// background-repeat: no-repeat;
+		// background-position: 103% -10px;
+	}
+	.person {
+		position: relative;
+		padding-top: 60px;
+		margin-top: 75px;
+		
+		.person-img-wrapper {
+			border-radius: 50%;
+			overflow: hidden;
+			width: 150px;
+			height: 150px;
+			border: 5px solid #fff;
+			box-shadow: 0 0 1px;
+			position: absolute;
+			left: ~'calc(50% - 75px)';
+			top: -75px;
+			transition: all 1000ms;
+			transform: rotateY(0deg);
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
+			background: #fff;
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				border-radius: 50%;
+				background: #232323;
+				border: 5px solid #fff;
+				box-shadow: 0 0 1px;
+				transition: all 1000ms;
+				transform: rotateY(180deg);
+				transform-style: preserve-3d;
+				backface-visibility: hidden;
+			}
+			.img-person {
+				width: 100%;
+			}
+		}
+		
+		&:hover {
+			.person-img-wrapper {
+				transform: rotateY(360deg);
+				&:after {
+					transform: rotateY(-180deg);
+				}
+			}
+		}
+		.person-name {
+			font-weight: bold;
+			font-size: 22px;
+			text-align: center;
+		}
 	}
 	/* ========== FOOTER ========== */
 	footer {

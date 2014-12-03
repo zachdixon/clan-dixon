@@ -10,6 +10,10 @@ addRemoveNavScrollClass = ->
 
 
 Meteor.startup ->
+  # Initialize WOW
   new WOW().init()
+  # Initialize Material Design plugins
+  $.material.init()
+  # Listen for scrolling to activate navbar
   $(window).scroll ->
     requestAnimationFrame(addRemoveNavScrollClass);

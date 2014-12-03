@@ -1,8 +1,22 @@
 
+
 .btn-large {
   font-size: 21px;
   line-height: 36px;
   padding: 12px 24px;
+}
+
+.btn-default {
+  color: #232323;
+  &:hover {
+    color: #232323;
+  }
+}
+.btn:not(.btn-default) {
+  color: rgba(255,255,255,.84);
+  &:hover, &:focus, &.focus {
+    color: #fff;
+  }
 }
 
 .navbar-default {
@@ -24,17 +38,13 @@
   transition: all 400ms;
   border-bottom: 2px solid transparent;
   border-radius: 0;
-  padding: 0;
-  paper-button {
-    padding: 10px 0;
-  }
   &:hover {
     border-bottom: 2px solid #fff;
   }
 }
 .navbar-default .navbar-brand {
   z-index: 900;
-  font-family: 'Pacifico', cursive;
+  font-family: 'cloister', cursive;
   font-size: 32px;
   line-height: 32px;
   color: #fff;
@@ -45,7 +55,6 @@
   font-weight: bold;
   background: rgba(255,255,255,0.5);
   border-bottom: 2px solid #fff;
-  margin: 0;
 }
 
 

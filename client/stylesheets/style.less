@@ -1,7 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700,900);
+
 @import "/client/stylesheets/variables.less";
-@import "/public/fonts/cloisterblack/stylesheet.less";
 
 // @footer-height: 100px;
+
+@font-face {
+  font-family: 'cloister';
+  src: url('/fonts/cloisterblack/cloisterblack-webfont.eot');
+  src: local('☺︎'),
+         url('/fonts/cloisterblack/cloisterblack-webfont.ttf') format('truetype');
+}
 
 html, body
 {
@@ -15,10 +23,9 @@ html, body
 	margin: 0 auto; /* the bottom margin is the negative value of the footer's height */
 }
 
-paper-button {
-  a {
-    color: #fff;
-  }
+p:first-of-type::first-letter {
+  font-family: 'cloister';
+  font-size: 30px;
 }
 
 
@@ -41,5 +48,5 @@ button.navbar-toggle {
  }
 
 .read-more {
-  margin: 25px 0;
+  margin: 10px 0;
 }
