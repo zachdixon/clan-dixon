@@ -36,4 +36,9 @@ mizzao:bootstrap-3
 # html5cat:bootstrap-material-design
 ecwyne:polymer-elements
 ecwyne:polymer
+andruschka:image-gallery
+isotope:isotope
+mrt:jquery-imagesloaded
+mrt:modernizr-meteor
+reactive-var
 

@@ -20,11 +20,14 @@
 }
 
 .navbar-default {
-  background: transparent;
+  background-color: rgba(35,35,35,0.5);
   border: none;
-  transition: all 400ms;
+  transition: background-color 400ms;
+  &.transparent {
+    background-color: transparent;
+  }
   &.scrolled {
-    background: #232323;
+    background-color: rgba(35,35,35,1);
   }
 }
 

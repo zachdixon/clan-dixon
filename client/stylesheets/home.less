@@ -1,0 +1,150 @@
+#home {
+  #intro-section {
+    background-image: url(/img/material_bg.png);
+  }
+
+  /* ========== HISTORY =========*/
+
+  #history-section {
+    header {
+      background-image: url(/img/tartan.jpg);
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 25px;
+      background-position: center 0%;
+      h2 {
+        padding: 0;
+        margin: 10px 0 20px 0;
+      }
+    }
+    img.img-thumbnail {
+      margin-bottom: 15px;
+      margin: 0 auto 15px;
+      display: block;
+    }
+  }
+
+  /* ========== ABOUT US ========*/
+
+  #aboutUs-section {
+    color: white;
+    background: url(/img/texas_flag.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    .container {
+      background: rgba(0,0,0,0.75);
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+  
+  .text-align-right {
+    text-align: right;
+  }
+  .text-align-left {
+    text-align: left;
+  }
+  /* ========== FAMILY ========*/
+  #family-section {
+    /* Full tree */
+    background-image: url('/img/tree.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 100px;
+
+    /* Corner tree */
+    // background-image: url('/img/corner_tree.png');
+    // background-repeat: no-repeat;
+    // background-position: 103% -10px;
+  }
+  .person {
+    position: relative;
+    padding-top: 60px;
+    margin-top: 75px;
+    .flipper {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      border: 10px solid #fff;
+      background: #fff;
+      position: absolute;
+      left: ~'calc(50% - 75px)';
+      top: -75px;
+    }
+    .front {
+      transition: all 2000ms;
+      transform: rotate3d(0,1,0,0);
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .back {
+      font-family: 'cloister';
+      color: #fff;
+      text-align: center;
+      font-size: 50px;
+      padding-top: 30px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: #232323;
+      transition: all 2000ms;
+      transform: rotate3d(0,1,0,-180deg);
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+      z-index: 0;
+    }
+    .person-img-wrapper {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      .img-person {
+        width: 100%;
+      }
+    }
+    
+    &:hover {
+      .front {
+        transform: rotate3d(0,1,0,360deg);
+        z-index: 0;
+      }
+      .back {
+        transform: rotate3d(0,1,0,180deg);
+        z-index: 10;
+      }
+    }
+    .person-name {
+      font-weight: bold;
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+  /* ========== GALLERY ========== */
+  #gallery-section {
+    background: #fff;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    .gallery-wrapper {
+      font-size: 0;
+      li {
+        width: 24%;
+        margin: 0.5%;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0;
+        box-shadow: none;
+        float: none;
+      }
+    }
+  }
+}

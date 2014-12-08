@@ -1,79 +1,152 @@
 <template name="home">
-	<section id="intro">
-		<div class="container">
-			<div class="intro-well wow animated bounceIn">
+	<div id="home">
+		<section id="intro-section">
+			<div class="container">
+				<div class="intro-well wow animated bounceIn">
+					<div class="row">
+						<div class="col-lg-12 col-sm-12">
+							<h1>{{Config.title}}</h1>
+							<h2 style="color:white;">{{Config.subtitle}}</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="history-section" class="layout-section">
+			<div class="container wow fadeIn animated">
+				<header class="clearfix">
+					<h1>Clan Dixon</h1>
+					<h2>Fortes Fortuna Juvat</h2>
+				</header>
 				<div class="row">
-					<div class="col-lg-12 col-sm-12">
-						<h1>{{Config.title}}</h1>
-						<h2 style="color:white;">{{Config.subtitle}}</h2>
+					<div class="col-md-6">
+						<img src="/img/dixon_coat_of_arms.gif" alt="" class="img-thumbnail img-responsive">
 					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="history" class="layout-section">
-		<div class="container wow fadeIn animated">
-			<header class="clearfix">
-				<h1>Clan Dixon</h1>
-				<h2>Fortes Fortuna Juvat</h2>
-			</header>
-			<div class="row">
-				<div class="col-md-6">
-					<img src="/img/dixon_coat_of_arms.gif" alt="" class="img-thumbnail img-responsive">
-				</div>
-				<div class="col-md-6">
-					<div class="panel panel-default">
-						<div class="panel-body">
-							<p>The Dickson/Dixon (and other derivates) family name was first found in Scotland. Early records show Thomas Dicson, a follower of the Douglas clan, at the capture of Castle Douglas in 1307. </p>
-							<p>Although the name was Scottish in it's origin, with the spelling of Dicson or Dickson (the most common usage in Scotland today), being a Borders counties name it also spread to the north and midlands of England to become a popular family name with the spelling of Dixon. </p>
-							<p>The ancient family motto is said to be "Fortes Fortuna Juvat", which is Latin for "Fortune Favors the Brave". </p>
-							{{> readMore text="Read More" path="#"}}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="aboutUs" class="layout-section">
-		<div class="container wow fadeIn animated">
-			<header class="clearfix">
-				<h1>About Us</h1>
-				<h2>The Dixons of Texas</h2>
-			</header>
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 col-sm-12">
-					<p>We were born all over the country, but settled in Texas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo ligula, dignissim eget mollis et, luctus non lorem. Ut sagittis tellus id lorem laoreet dignissim. Etiam eget sapien faucibus metus efficitur viverra. Donec venenatis arcu vel nulla fermentum, eget porttitor purus mattis. Mauris accumsan et purus eget auctor. Vestibulum dignissim libero quis odio accumsan elementum. Sed sed blandit leo, maximus finibus felis.</p>
-					<p>Suspendisse non justo molestie, tempor mauris id, ultricies turpis. Etiam et ex a massa egestas laoreet. Cras rutrum consectetur nunc, sed efficitur augue vulputate eu. Mauris sit amet venenatis nulla, ac aliquam neque. Donec pellentesque est ac lacus iaculis imperdiet. Donec sit amet aliquet arcu, sit amet vulputate odio. Vestibulum vehicula ante ex, vitae mattis nunc accumsan eget. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce metus ligula, maximus in viverra non, ullamcorper et nisl. Maecenas sed erat tincidunt, accumsan libero ut, blandit ante. In eu sem ac mauris consequat porta nec sed nulla. In mollis lobortis mauris sit amet commodo.</p>
-					{{> readMore text="Read More" path="#"}}
-				</div>
-			</div>
-		</div>
-	</section>
-	<section id="family" class="layout-section">
-		<div class="container wow fadeIn animated">
-			<header class="clearfix">
-				<h1>The Family</h1>
-				<h2>A tree of Dixons</h2>
-			</header>
-			<div class="row">
-				{{#each people}}
-					<div class="col-md-4 col-sm-6 col-xs-12">
-						<div class="person panel panel-default">
-							<div class="person-img-wrapper img-wrapper">
-								<img src="/img/profile_2.jpg" alt="" class="img-person">
-							</div>
+					<div class="col-md-6">
+						<div class="panel panel-default">
 							<div class="panel-body">
-								<p class="person-name">Zachary Dixon</p>
-								<p>Suspendisse non justo molestie, tempor mauris id, ultricies turpis. Etiam et ex a massa egestas laoreet. Cras rutrum consectetur nunc, sed efficitur augue vulputate eu. Mauris sit amet venenatis nulla, ac aliquam neque.</p>
+								<p>The Dickson/Dixon (and other derivates) family name was first found in Scotland. Early records show Thomas Dicson, a follower of the Douglas clan, at the capture of Castle Douglas in 1307. </p>
+								<p>Although the name was Scottish in it's origin, with the spelling of Dicson or Dickson (the most common usage in Scotland today), being a Borders counties name it also spread to the north and midlands of England to become a popular family name with the spelling of Dixon. </p>
+								<p>The ancient family motto is said to be "Fortes Fortuna Juvat", which is Latin for "Fortune Favors the Brave". </p>
+								{{> readMore text="Read More" path="#"}}
 							</div>
 						</div>
 					</div>
-				{{/each}}
-				<div class="col-xs-12">
-					{{> readMore text="View Family Tree" path="#"}}
 				</div>
 			</div>
-		</div>
-	</section>
-	
+		</section>
+		<section id="aboutUs-section" class="layout-section">
+			<div class="container wow fadeIn animated">
+				<header class="clearfix">
+					<h1>About Us</h1>
+					<h2>The Dixons of Texas</h2>
+				</header>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-sm-12">
+						<p>We were born all over the country, but settled in Texas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent justo ligula, dignissim eget mollis et, luctus non lorem. Ut sagittis tellus id lorem laoreet dignissim. Etiam eget sapien faucibus metus efficitur viverra. Donec venenatis arcu vel nulla fermentum, eget porttitor purus mattis. Mauris accumsan et purus eget auctor. Vestibulum dignissim libero quis odio accumsan elementum. Sed sed blandit leo, maximus finibus felis.</p>
+						<p>Suspendisse non justo molestie, tempor mauris id, ultricies turpis. Etiam et ex a massa egestas laoreet. Cras rutrum consectetur nunc, sed efficitur augue vulputate eu. Mauris sit amet venenatis nulla, ac aliquam neque. Donec pellentesque est ac lacus iaculis imperdiet. Donec sit amet aliquet arcu, sit amet vulputate odio. Vestibulum vehicula ante ex, vitae mattis nunc accumsan eget. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce metus ligula, maximus in viverra non, ullamcorper et nisl. Maecenas sed erat tincidunt, accumsan libero ut, blandit ante. In eu sem ac mauris consequat porta nec sed nulla. In mollis lobortis mauris sit amet commodo.</p>
+						{{> readMore text="Read More" path="#"}}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="family-section" class="layout-section">
+			<div class="container wow fadeIn animated">
+				<header class="clearfix">
+					<h1>The Family</h1>
+					<h2>A tree of Dixons</h2>
+				</header>
+				<div class="row">
+					{{#each people}}
+						<div class="col-md-4 col-sm-6 col-xs-12">
+							<div class="person panel panel-default wow animated bounceIn">
+								<div class="flipper">
+									<div class="front">
+										<div class="person-img-wrapper img-wrapper">
+											<img src="/img/profile_2.jpg" alt="" class="img-person">
+										</div>
+									</div>
+									<div class="back">
+										<b>D</b>
+									</div>
+								</div>
+								<div class="panel-body">
+									<p class="person-name">Zachary Dixon</p>
+									<p>Suspendisse non justo molestie, tempor mauris id, ultricies turpis. Etiam et ex a massa egestas laoreet. Cras rutrum consectetur nunc, sed efficitur augue vulputate eu. Mauris sit amet venenatis nulla, ac aliquam neque.</p>
+								</div>
+							</div>
+						</div>
+					{{/each}}
+					<div class="col-xs-12">
+						{{> readMore text="View Family Tree" path="#"}}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="gallery-section" class="layout-section">
+			<div class="container wow fadeIn animated">
+				<header class="clearfix">
+					<h1>Photos</h1>
+					<h2>A Dixon Gallery</h2>
+				</header>
+				<div class="row">
+					<div class="col-xs-12">
+						<ul id="links" class="gallery-wrapper da-thumbs">
+							<li>
+								<a href="/img/img1.jpg" data-gallery>
+									<img src="/img/img1.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Our home in Rockett, TX</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img2.jpg" data-gallery>
+									<img src="/img/img2.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Family Reunion: Jim and Kathy</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img3.jpg" data-gallery>
+									<img src="/img/img3.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Family Reunion: Jim and Josh</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img4.jpg" data-gallery>
+									<img src="/img/img4.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Wedding: Josh and Lori</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img5.jpg" data-gallery>
+									<img src="/img/img5.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Jim and his grandson</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img6.jpg" data-gallery>
+									<img src="/img/img6.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Wedding: Josh and Lori</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img7.jpg" data-gallery>
+									<img src="/img/img7.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Brian and his family</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/img/img8.jpg" data-gallery>
+									<img src="/img/img8.jpg" alt="" class="wow animated bounceIn img-responsive img-thumbnail"/>
+									<div><span>Four generations</span></div>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-12">
+						{{> readMore text="View Full Gallery" path="#"}}
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </template>

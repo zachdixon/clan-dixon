@@ -4,17 +4,26 @@ Router.configure
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
 
+# Meteor.startup ->
+#   Session.setDefault 'currentPage', null
+
+Router.onBeforeAction ->
+  Session.set 'currentPage', @.route.getName()
+  @next()
+
 Router.map ->
   
   @route "home",
     path: "/"
-    layoutTemplate: "homeLayout"
+  @route "about"
+  @route "history"
+  @route "tree"
+  @route "gallery"
+  @route "blog"
   @route "profile",
-    path: "/profile"
     waitOn: ->
       Meteor.subscribe 'profilePictures'
-  @route "account",
-    path: "/account"
+  @route "account"
 
 
 Router.waitOn ->

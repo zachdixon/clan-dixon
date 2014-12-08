@@ -1,0 +1,133 @@
+<template name="history">
+  <div id="history">
+    <section id="intro-section">
+      <div class="container">
+        <div class="intro-well wow animated bounceIn">
+          <div class="row">
+            <div class="col-lg-12 col-sm-12">
+              <h1>Dixon History</h1>
+              <h2 style="color:white;">Everything you need to know about the Dixon Clan</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="history-nav">
+      <paper-tabs selected="0" class="tabs white">
+        <paper-tab data-value="0">CLAN DIXON</paper-tab>
+        <paper-tab data-value="1">CLAN KEITH</paper-tab>
+      </paper-tabs>
+      {{#if selectedTab 0}}
+        <paper-tabs selected="{{$.Session.get 'historySubTab'}}" class="sub-tabs gray">
+          <paper-tab data-value="0">HISTORY</paper-tab>
+          <paper-tab data-value="1">HERALDRY</paper-tab>
+          <paper-tab data-value="2">TARTAN</paper-tab>
+          <paper-tab data-value="3">DRESS</paper-tab>
+        </paper-tabs>
+      {{/if}}
+      {{#if selectedTab 1}}
+        <paper-tabs selected="{{$.Session.get 'historySubTab'}}" class="sub-tabs gray">
+          <paper-tab data-value="0">ORIGINS</paper-tab>
+          <paper-tab data-value="1">MARISCHALS</paper-tab>
+          <paper-tab data-value="2">FEUD</paper-tab>
+          <paper-tab data-value="3">FAMOUS</paper-tab>
+        </paper-tabs>
+      {{/if}}
+    </section>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          {{#if selectedTab 0}}
+            <core-animated-pages selected="{{$.Session.get 'historySubTab'}}" transitions="cross-fade" notap>
+              <section class="history-section" relative>
+                <div cross-fade>
+                  <h1>History</h1>
+                  <p>The Dickson/Dixon (and other derivates) family name was first found in Scotland. Early records show Thomas Dicson, a follower of the Douglas clan, at the capture of Castle Douglas in 1307.</p>
+                  <p>Although the name was Scottish in it's origin, with the spelling of Dicson or Dickson (the most common usage in Scotland today), being a Borders counties name it also spread to the north and midlands of England to become a popular family name with the spelling of Dixon.</p>
+                  <p>It was during the 11th century that the use of surnames was introduced to the British Isles by the Normans. They were usually local (a place or landmark), patronymic ("son of"), a trade or profession name, or a nickname. The name Dixon/Dickson is a patronymic name, meaning "Dick's son" or "son of Dick". Coming from Scotland it might seem strange that it is not "MacDick", but this is simply explained again by it's Borders origins.</p>
+                  <p>The ancient family motto is said to be "Fortes Fortuna Juvat", which is Latin for "Fortune Favors the Brave".</p>
+                  <p>In his book, The Border and Riding Clans and a Shorter History of Clan Dixon, (published by Albany, New York, 1888) B. Homer Dixon wrote: - "In a charter from King Robert Bruce about A.D. 1306 to Thomas Dickson it [the name] occurs as Filius Ricardi (son of Richard) and the Charter is endorsed Carta Thomas fil Dick."</p>
+                  <p>
+                    <img src="/img/arms.gif" alt="" class="img-thumbnail pull-left">
+                    "Nesbit in his Heraldry (Edinburgh, 1722) says 'The Dicksons are descended from one Richard Keith, said to be a son of the family of Keith's Earls Marshalls of Scotland.' and in proof thereof carry the chief of Keith Marischal. This Richard was commonly called Dick and the 'son' was styled after him. The affix of son in the Lowlands answering to the prefix Mac in the Highlands."
+                  </p>
+                  <p>Because of the connection to Richard Keith, the descendants of Thomas Dicson/Dickson are considered part of the Clan Keith and use their tartan.</p>
+                  <p>The Chief of Clan Keith has the Latin motto "Veritas Vincit," which translates "Truth Conquers" which is also used on their clansman's badge.</p>
+                  <p>In 1583, a list of Gentlemen and Surnames in the Marches of England and Scotland includes the name Dixon as Gentlemen of the East March. Many Dixons can also be found within the English East March, presumably having begun their association there when Berwick-Upon-Tweed was Scottish and it's Governor, the Keith Marischal.</p>
+                  <p>Thomas Dickson himself has quite a history. He was associated in some way with William Wallace of "Braveheart", and he was killed by the English in 1307 in battle. Tradition states that he was slashed across the abdomen but continued to fight holding the abdominal wound closed with one hand until he finally dropped dead. He is buried in the churchyard of St. Bride of Douglas, and his marker shows him with a sword in one hand and holding his belly with the other.  Robert de Brus (Bruce) had made him Castellan of Castle Douglas the year before he was killed.</p>
+                  <p>The Dixons (and other Borders Families) were formally recognized as a Clan by the Scottish Parliament in 1587  when the Parliament of Scotland passed a statute "For the quieting and keping in obiedince of the disorderit subiectis inhabitantis of the bordors hielands and Ilis." Attached to the statute was a Roll of the Clans, and contained both a borders portion and a highland portion. The borders part of the Roll, shows the Dixons as a clan with chiefs in the East March.  According  to the book, Traits and Stories of the Scottish People, London, 1867, the Clan Dixon was known as 'The Famous Dicksons'!</p>
+                  <p>Their daughters appear to have been likewise eminent, in their case we must suppose both for beauty and accomplishments, as the old rhyme says:</p>
+                  <blockquote>
+                    "Boughtrip and Belchester
+                     Hatchetknows and Darnchester
+                     Leetholm and the Peel;
+                     If ye dinna get a wife in ane of thae places
+                     Ye'll ne'er do weel."
+                  </blockquote>
+                  <p>Buhtrig, Belchester, Leitholm and the Peel were Dickson baronies. Darchester belonged at one time to the Trotters.</p>
+                  <p>In 1591, two bonds were signed by the principal Barons and Gentlemen of the East Marches pledging themselves to serve the King against Bothwell, and of the forty-one subscribers whose names have been preserved four were Dicksons.</p>
+                  <p>In 1603, when the crowns of Scotland and England were united under James VI of Scotland, he found it expedient to disperse the unruly Border Clans to England, northern Scotland and to Ireland.</p>
+                  <p>Border clans naturally differed quite widely from Highland clans, who after all had an active existence that lasted a century and a half longer than that of the border clans, giving them extra time for development. A main point of difference was the possession by the Highland clans of Gaelic speech and a unique culture of their own until 1745. The Highlanders were also geographically much more isolated from the general course of Scottish history than were the Scottish Borderers. Both Border and Highland clans, however, had the essential feature of chiefship, and had territories in which a majority of their clansmen lived.</p>
+                  <p>Border clans did practice some Gaelic customs, such as tutorship when an heir who was a minor succeeded to the chiefship, and giving bonds of manrent. Although feudalism existed, tribal loyalty was much more important, and this is what distinguished the Borderers from other lowland Scots. In fact, the same is also true of the English Borderers.</p>
+                </div>
+              </section>
+              <section class="history-section" relative>
+                <div cross-fade>
+                  <h1>Heraldry</h1>
+                  <p>The symbols and heraldry associated with our Scottish heritage are indeed fascinating to many people. Unfortunately, they are often misunderstood and misused. The Clan Keith Society USA, Inc. encourages all interested parties to learn and follow the rules of heraldry. Primarily, that there is no such thing as a family coat of arms. Arms are the property and signature of an individual, and the ownership of arms is strictly maintained by Lord Lyon. Those eager to show their support of Clan Keith are encouraged to use the clansman's crest badge as described below.</p>
+                  <h2>Understanding Heraldry</h2>
+                  <img src="/img/arms-small.jpg" alt="" class="img-thumbnail pull-left">
+                  <p>"Heraldry, or armory, is a system of personal or corporate identification that first developed in Europe during the twelfth century and which is still in use today. It uses bright colors in recognizable and easily remembered arrangements together with objects, called 'charges'.... These colorful designs were first used on banners, shields and surcoats worn or carried by individual knights in battle and in tournaments. The term 'coat of arms' derives from the surcoat on which the heraldry was displayed.</p>
+                  <p>In order that heraldic symbolism would be able to identify the individual, rules evolved whereby each coat of arms could belong to only one person at a time.... In some European countries, a system of 'patronymic arms' has grown up - persons bearing a particular name, although perhaps unrelated, are considered as having an equal right to the arms of the name. This is not the case in Scotland and it is essential in understanding Scots heraldry to realize that the rule concerning the individuality of heraldry was, and is, strictly applied under Acts of the Scottish Parliament of 1592 and 1672; even an eldest son may not bear his father's arms during his father's lifetime without a suitable difference being displayed. Consequently, the terms 'family arms' or 'clan crest' are meaningless in Scotland. Arms are strictly personal to the owner and their use or display by others, without permission, is illegal.</p>
+                  <p>The only heraldic device which may be used by a non-armigerous clansman is the so-called strap and buckle or clansman's crest badge."</p>
+                  <p>Source: Way, George. <cite>Scottish Clan &amp; Family Encyclopedia.</cite> Barnes &amp; Noble, 1998.</p>
+                  <h2>Keith Heraldry</h2>
+                  <img src="/img/arms.gif" alt="" class="img-thumbnail pull-left">
+                  <p>According to early accounts, a warrior of the Chatti slew the Danish General Camus at the Battle of Barrie in 1010. For his valor, Malcolm II dipped three fingers into the blood of the slain and drew them down the shield of the warrior, thereafter named Marbhachair Chamuis, or 'Camus Slayer'. Ever since then, the chief of the Keiths has born on his arms the same three (sometimes four) red lines. This is depicted as early as 1316 on the seal of Sir Robert de Keith, marischal.</p>
+                  <p>The Keith crest is a roebuck's head (usually a 10-point stag) emerging out of a Crest Coronet (notifying nobility).</p>
+                  <p style="clear:both;"></p>
+                  <h2>Keith Standard</h2>
+                  <p>The standard is a long, narrow, tapering flag, granted by the Lord Lyon only to those who have a following, such as clan chiefs. As such, it is the property of that individual and should not be used or displayed by others except by permission (such as the educational purpose here).</p>
+                  <p>At the hoist, the standard usually shows the owner's arms, though some are still granted with the former practice of having the national saltire in the hoist (as the one shown here). The remainder of the flag is divided into two tracts of the livery colors for chiefs of clans or families.... Upon this background are usually displayed the owner's crest and heraldic badges, separated by traverse bands bearing the owner's motto or slogan.</p>
+                  <p>The length of the standard varies according to the rank of its owner, ranging from 4 to 8 yards. As the Earl of Kintore, the Chief of the Name Keith's standard is 6 yards in length.</p>
+                  <div class="col-xs-6">
+                    <img src="/img/standard.jpg" alt="" class="img-thumbnail">
+                  </div>
+                  <div class="col-xs-6">
+                    <img src="/img/standard-1513.jpg" alt="" class="img-thumbnail">
+                  </div>
+                  <h2>Keith Mottos</h2>
+                  <p>Often associated with battle cries, mottos appear in virtually all Scottish Arms. Most authorities believe that mottos first appeared on standards and shields, and were thus used as war cries as well as religious or patriotic statements. They usually appear in an escrol above the individual's crest, as well as in the clansman's badge. Clan Keith recognizes two mottos:</p>
+                  <ul>
+                    <li><p>Quae amissa salva, which translates What has been lost is safe. This motto references the role that the Keith family played in protecting the Scottish Regalia (crown, scepter, sword and scabbard) from Oliver Cromwell's troops during 1651-2.</p></li>
+                    <li><p>Veritas vincit (Truth conquers)</p></li>
+                  </ul>
+                  <h2>Keith Plant Badge</h2>
+                  <img src="/img/White_Rose.gif" alt="" class="img-thumbnail pull-left">
+                  <p>The Keith plant badge is the <strong>white rose</strong>.</p>
+                  <p>Before tartans and clan crests were established, plant badges were the likely symbols of clan affiliation. Many Scottish clans opted for sprigs from trees like oak, Scots pine, hazel, birch, juniper, rowan and even driftwood to identify themselves. Other clans chose among Scottish wildflowers for a plant badge.</p>
+                  <p>Sprigs of the plant may be pinned behind the silver crest on their bonnet or sash-badge brooch. The plant badge may also be carried beside the Clan standard or fixed on a staff or spear.</p>
+                  <h2>Keith Clansman's Crest Badge</h2>
+                  <img src="/img/badge.gif" alt="" class="img-thumbnail pull-right">
+                  <p>The clansman's crest badge may be worn and displayed by the Chief's relatives, including his own immediate family and even his eldest son, and ALL members of the extended family called the "Clan", whether bearing the Clan surname or that of one of its septs ; in sum, all those who profess allegiance to that Chief and wish to demonstrate their association with the Clan.</p>
+                  <p>It is correct for these to wear their Chief's Crest encircled with a strap and buckle bearing their Chief's Motto or Slogan. The strap and buckle is the sign of the clansman, and he demonstrates his membership of his Chief's Clan by wearing his Chief's Crest within it.</p>
+                </div>
+              </section>
+              <section class="history-section" relative>
+                <div cross-fade>
+                  <p>Test 3</p>
+                </div>
+              </section>
+              <section class="history-section" relative>
+                <div cross-fade>
+                  <p>Test 4</p>
+                </div>
+              </section>
+            </core-animated-pages>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</template>

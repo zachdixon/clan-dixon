@@ -54,164 +54,7 @@ body
 			font-weight: 300;
 		}
 	}
-	/* ========== INTRO ========== */
 
-	#intro {
-		width: 100%;
-		z-index: 1;
-		color:white;
-		background-color: #010101;
-		background: url(../img/material_bg.png);
-		background-position: center bottom;
-		background-repeat: no-repeat;
-		background-attachment: fixed;
-		background-size: cover;
-		padding: 100px 0 140px 0;
-
-		h1 {
-			font-family: 'Cinzel Decorative', sans-serif;
-			font-size: 62px;
-			line-height: 62px;
-			font-weight: 400;
-			letter-spacing: 1.5px;
-			text-align: center;
-			color: #fff;
-			margin-bottom: 20px;
-			clear: both;
-			display: block;
-		}
-		h2 {
-			font-family: 'Lato', sans-serif;
-			font-weight: 300;
-			font-size: 2em;
-			line-height: 32px;
-			color: #fff;
-			text-align: center;
-			margin-bottom: 35px;
-			clear: both;
-			display: block;
-			text-transform: uppercase;
-		}
-	}
-	.intro-well {
-		text-align: center;
-		position: relative;
-		z-index: 100;
-		padding-top: 70px;
-	}
-
-	/* ========== HISTORY =========*/
-
-	#history {
-		header {
-			background-image: url(/img/tartan.jpg);
-			color: #fff;
-			border-radius: 5px;
-			margin-bottom: 25px;
-			background-position: center 0%;
-			h2 {
-				padding: 0;
-				margin: 10px 0 20px 0;
-			}
-		}
-		img.img-thumbnail {
-			margin-bottom: 15px;
-			margin: 0 auto 15px;
-			display: block;
-		}
-	}
-
-	/* ========== ABOUT US ========*/
-
-	#aboutUs {
-		color: white;
-		background: url(/img/texas_flag.jpg);
-		background-position: center center;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-attachment: fixed;
-		.container {
-			background: rgba(0,0,0,0.75);
-		}
-		p {
-			font-size: 15px;
-		}
-	}
-	
-	.text-align-right {
-		text-align: right;
-	}
-	.text-align-left {
-		text-align: left;
-	}
-	/* ========== FAMILY ========*/
-	#family {
-		/* Full tree */
-		background-image: url('/img/tree.svg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center 100px;
-
-		/* Corner tree */
-		// background-image: url('/img/corner_tree.png');
-		// background-repeat: no-repeat;
-		// background-position: 103% -10px;
-	}
-	.person {
-		position: relative;
-		padding-top: 60px;
-		margin-top: 75px;
-		
-		.person-img-wrapper {
-			border-radius: 50%;
-			overflow: hidden;
-			width: 150px;
-			height: 150px;
-			border: 5px solid #fff;
-			box-shadow: 0 0 1px;
-			position: absolute;
-			left: ~'calc(50% - 75px)';
-			top: -75px;
-			transition: all 1000ms;
-			transform: rotateY(0deg);
-			transform-style: preserve-3d;
-			backface-visibility: hidden;
-			background: #fff;
-			&:after {
-				content: '';
-				position: absolute;
-				top: 0;
-				right: 0;
-				bottom: 0;
-				left: 0;
-				border-radius: 50%;
-				background: #232323;
-				border: 5px solid #fff;
-				box-shadow: 0 0 1px;
-				transition: all 1000ms;
-				transform: rotateY(180deg);
-				transform-style: preserve-3d;
-				backface-visibility: hidden;
-			}
-			.img-person {
-				width: 100%;
-			}
-		}
-		
-		&:hover {
-			.person-img-wrapper {
-				transform: rotateY(360deg);
-				&:after {
-					transform: rotateY(-180deg);
-				}
-			}
-		}
-		.person-name {
-			font-weight: bold;
-			font-size: 22px;
-			text-align: center;
-		}
-	}
 	/* ========== FOOTER ========== */
 	footer {
 		background: #34495e;
@@ -225,14 +68,14 @@ body
 	}
 	/* ========== MEDIA QUIRIES ========== */
 	@media screen and (max-width:500px) {
-		#intro {
+		#intro-section {
 			padding-bottom: 50px;
 		}
-		#intro h1 {
+		#intro-section h1 {
 			font-size: 18px;
 			line-height: 22px;
 		}
-		#intro h2 {
+		#intro-section h2 {
 			font-size: 14px;
 			line-height: 18px;
 		}
@@ -250,17 +93,17 @@ body
 		.container {
 			max-width: 730px !important;
 		}
-		#intro {
+		#intro-section {
 			padding-bottom: 100px;
 		}
 		.intro-well {
 			padding-top: 20px;
 		}
-		#intro h1 {
+		#intro-section h1 {
 			font-size: 48px;
 			line-height: 48px;
 		}
-		#intro h2 {
+		#intro-section h2 {
 			font-size: 18px;
 			line-height: 22px;
 		}
