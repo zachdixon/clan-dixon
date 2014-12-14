@@ -1,9 +1,11 @@
+@blue: #040147;
+
 #history {
   #intro-section {
     background-image: url(/img/scotland_map_cloth_blur.png);
   }
   paper-tabs.white paper-tab {
-    background: #040147;
+    background: @blue;
     color: #fff;
   }
   paper-tabs.white::shadow #selectionBar {
@@ -13,15 +15,33 @@
     color: #fff;
   }
   paper-tabs.gray::shadow #selectionBar {
-    background-color: #023411;
+    background-color: @blue;
   }
   paper-tabs.gray paper-tab::shadow #ink {
-    color: #023411;
+    color: @blue;
   }
   paper-tabs.gray paper-tab {
     background: #ddd;
   }
   p {
     font-size: 16px;
+  }
+  #sidenav {
+    padding-top: 20px;
+    li {
+      a {
+        color: #666;
+        font-weight: bold;
+        &:hover {
+          border-left: 1px solid @blue;
+          padding-left: 14px;
+        }
+      }
+      &.active a {
+        color: @blue;
+        border-left: 3px solid @blue;
+        padding-left: 12px;
+      }
+    }
   }
 }

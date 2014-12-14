@@ -1,0 +1,30 @@
+<polymer-element name="bs-affix" attributes="offsettop offsetbottom autoscroll offsetscrolltop">
+  <template>
+    <content id="content"></content>
+  </template>
+  <script>
+    Polymer('bs-affix', {
+      offsettop: 0,
+      offsetbottom: 0,
+      autoscroll: false,
+      offsetscrolltop: 0,
+
+      domReady: function() {
+        $(this.children[0]).affix({
+          offset: {
+            top: this.offsettop
+          }
+        });
+        if(this.autoscroll) {
+          var _this = this;
+          $(this.children).find('a').on('click', function(e) {
+            $('html,body').animate({scrollTop: ($(this.hash).offset().top - _this.offsetscrolltop)}, 400);
+            $(_this).find('li.active').removeClass('active');
+            $(this).closest('li').addClass('active');
+          });
+
+        }
+      }
+    });
+  </script>
+</polymer-element>

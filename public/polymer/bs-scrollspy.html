@@ -1,0 +1,52 @@
+<polymer-element name="bs-scrollspy" attributes="target">
+  <style>
+    :host, .scroll-area {
+      display: block;
+      position: relative;
+    }
+  </style>
+  <template>
+    <content></content>
+  </template>
+  <script>
+    // Returns a function, that, as long as it continues to be invoked, will not
+    // be triggered. The function will be called after it stops being called for
+    // N milliseconds. If `immediate` is passed, trigger the function on the
+    // leading edge, instead of the trailing.
+    function debounce(func, wait, immediate) {
+      var timeout;
+      return function() {
+        var context = this, args = arguments;
+        var later = function() {
+          timeout = null;
+          if (!immediate) func.apply(context, args);
+        };
+        var callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+      };
+    };
+    Polymer('bs-scrollspy', {
+      domReady: function() {
+        var _this = this;
+        // $('.scroll-area').scrollspy({target: this.target});
+        $(document).on('scroll', debounce(function(e){
+          var $anchors = $(_this.target).find('a'),
+              $body = $('body'),
+              $win = $(window),
+              $active = null;
+          $anchors.each(function(el) {
+            if(($body.scrollTop() + $win.height()) > $(this.hash).offset().top) {
+              $active = $(this);
+            }
+          });
+          if($active && !$active.closest('li').is('.active')) {
+            $(_this.target).find('li.active').removeClass('active');
+            $active.closest('li').addClass('active');
+          }
+        }, 100));
+      }
+    });
+  </script>
+</polymer-element>

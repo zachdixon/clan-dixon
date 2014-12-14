@@ -2,6 +2,14 @@ Meteor.startup ->
   Session.set 'historyTab', 0
   Session.set 'historySubTab', 0
 
+Template.history.rendered = ->
+  $(document).on 'WebComponentsReady', ->
+    # Polymer 'core-animated-pages',
+    #   ready: ->
+    #     this.$.sidenav.affix
+    #       offset:
+    #         top: 70
+    
 Template.history.events
   'click .tabs paper-tab': (e, doc) ->
     tab = parseInt($(e.currentTarget).data('value'))
