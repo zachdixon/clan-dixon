@@ -36,6 +36,27 @@ html, body
   text-align: center;
 }
 
+.main-bg {
+  background: #040147;
+  background: -moz-linear-gradient(-45deg,  #040147 0%, #023411 100%);
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#040147), color-stop(100%,#023411));
+  background: -webkit-linear-gradient(-45deg,  #040147 0%,#023411 100%);
+  background: -o-linear-gradient(-45deg,  #040147 0%,#023411 100%);
+  background: -ms-linear-gradient(-45deg,  #040147 0%,#023411 100%);
+  background: linear-gradient(135deg,  #040147 0%,#023411 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#040147', endColorstr='#023411',GradientType=1 );
+
+  &.fixed {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
 /* ========== INTRO ========== */
 
 #intro-section {

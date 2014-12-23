@@ -8,21 +8,26 @@ coffeescript
 less
 accounts-base
 accounts-password
+
+iron:router@1.0.0
+
 aldeed:autoform
 alanning:roles
 aldeed:collection2
 aldeed:simple-schema
+aldeed:template-extension
+
 joshowens:accounts-entry
 chrismbeckett:fontawesome4
 raix:handlebar-helpers
+
 cfs:standard-packages
 cfs:gridfs
-aldeed:template-extension
-yogiben:alerts
 cfs:graphicsmagick
+
+yogiben:alerts
 yogiben:helpers
 yogiben:user-helpers
-iron:router@1.0.0
 yogiben:autoform-modals
 yogiben:favorites@0.0.4
 yogiben:comments@0.0.8
@@ -32,8 +37,10 @@ yogiben:pretty-email
 yogiben:autoform-file
 yogiben:admin
 # yogiben:bootstrap
+
 mizzao:bootstrap-3
 # html5cat:bootstrap-material-design
+
 ecwyne:polymer-elements
 ecwyne:polymer
 andruschka:image-gallery
