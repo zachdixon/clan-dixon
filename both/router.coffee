@@ -8,22 +8,33 @@ Router.configure
 #   Session.setDefault 'currentPage', null
 
 Router.onBeforeAction ->
-  Session.set 'currentPage', @.route.getName()
+  Session.set 'currentPage', @route.getName()
   @next()
 
-Router.map ->
-  
-  @route "home",
-    path: "/"
-  @route "about"
-  @route "history"
-  @route "tree"
-  @route "gallery"
-  @route "blog"
-  @route "profile",
-    waitOn: ->
-      Meteor.subscribe 'profilePictures'
-  @route "account"
+Router.route "/",
+  name: "home"
+Router.route "/about",
+  name: "about"
+Router.route "/history",
+  name: "history"
+Router.route "/tree",
+  name: "tree"
+Router.route "/gallery",
+  name: "gallery"
+Router.route "/gallery/:_id",
+  name: "album"
+  # waitOn: ->
+  #   Meteor.subscribe 'album', @params.id
+  # data: ->
+  #   {name: "Album 1"}
+Router.route "/blog",
+  name: "blog"
+Router.route "/profile",
+  name: "profile"
+  waitOn: ->
+    Meteor.subscribe 'profilePictures'
+Router.route "/account",
+  name: "account"
 
 
 Router.waitOn ->

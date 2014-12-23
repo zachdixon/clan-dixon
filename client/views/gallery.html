@@ -1,0 +1,76 @@
+<template name="gallery">
+  <section id="gallery" class="layout-section">
+    <div class="container">
+      <header class="clearfix">
+        <h1 class="pull-left">Photo Albums</h1>
+      </header>
+      <div class="row">
+        <div class="album-wrapper col-md-4 col-sm-6 col-xs-6">
+          <div class="album panel panel-default">
+            <a href="{{pathFor route='album' _id='1'}}">
+              <div class="panel-body">
+                <div class="img-wrapper">
+                  <img src="/img/img1.jpg" alt="" class="img-responsive">
+                </div>
+                <p class="album-name">Album 1</p>
+                <p class="photo-count">12 photos</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="album-wrapper col-md-4 col-sm-6 col-xs-6">
+          <div class="album panel panel-default">
+            <a href="{{pathFor route='album' _id='2'}}">
+              <div class="panel-body">
+                <div class="img-wrapper">
+                  <img src="/img/img2.jpg" alt="" class="img-responsive">
+                </div>
+                <p class="album-name">Album 2</p>
+                <p class="photo-count">1 photo</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="album-wrapper col-md-4 col-sm-6 col-xs-6">
+          <div class="album panel panel-default">
+            <a href="{{pathFor route='album' _id='3'}}">
+              <div class="panel-body">
+                <div class="img-wrapper">
+                  <img src="/img/img3.jpg" alt="" class="img-responsive">
+                </div>
+                <p class="album-name">Album 3</p>
+                <p class="photo-count">25 photos</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="album-wrapper col-md-4 col-sm-6 col-xs-6">
+          <div class="album panel panel-default">
+            <a href="{{pathFor route='album' _id='4'}}">
+              <div class="panel-body">
+                <div class="img-wrapper">
+                  <img src="/img/img4.jpg" alt="" class="img-responsive">
+                </div>
+                <p class="album-name">Album 4</p>
+                <p class="photo-count">5 photos</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="album-wrapper col-md-4 col-sm-6 col-xs-6">
+          <div class="album panel panel-default">
+            <a href="{{pathFor route='album' _id='5'}}">
+              <div class="panel-body">
+                <div class="img-wrapper">
+                  <img src="/img/img5.jpg" alt="" class="img-responsive">
+                </div>
+                <p class="album-name">Album 5</p>
+                <p class="photo-count">286 photos</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>

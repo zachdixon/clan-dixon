@@ -1,0 +1,36 @@
+#gallery {
+  padding-top: 60px;
+  & > .container {
+    padding-top: 10px;
+  }
+  header {
+    h1 {
+      // margin: 15px 0 25px 0;
+    }
+  }
+  .album-wrapper {
+    display: inline-block;
+    float: none;
+    width: ~'calc(33.33333333% - 3px)';
+    vertical-align: middle;
+  }
+  .album {
+    .img-wrapper {
+      margin-bottom: 10px;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .photo-count {
+    color: #232323;
+  }
+}
+
+@media (max-width: 991px) {
+  #gallery {
+    .album-wrapper {
+      width: ~'calc(50% - 3px)';
+    }
+  }
+}

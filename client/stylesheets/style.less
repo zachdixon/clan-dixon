@@ -16,6 +16,10 @@ html, body
   position: relative;
 }
 
+*:focus {
+  color: inherit;
+}
+
 .layout {
 	min-height: 100%;
 	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
@@ -119,6 +123,26 @@ img {
   }
   &.margin-top-10 {
     margin-top: 10px;
+  }
+}
+
+.gallery-wrapper {
+  font-size: 0;
+  li {
+    width: 24%;
+    margin: 0.5%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    box-shadow: none;
+    float: none;
+  }
+}
+@media (max-width: 768px) {
+  .gallery-wrapper {
+    li {
+      width: 49%;
+    }
   }
 }
 
