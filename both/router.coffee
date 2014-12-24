@@ -11,6 +11,9 @@ Router.onBeforeAction ->
   Session.set 'currentPage', @route.getName()
   @next()
 
+Router.onAfterAction ->
+  $('body').scrollTop(0)
+
 Router.route "/",
   name: "home"
 Router.route "/about",
